@@ -1,10 +1,13 @@
 import AbstractAbcService from "@/services/AbstractAbcService";
-import Item from "@/models/Item";
+import CartLine from "@/models/CartLine";
 
-export default class ItemService extends AbstractAbcService {
+class CartLineService extends AbstractAbcService {
     constructor() {
         super();
-        this.model = Item;
+        this.model = CartLine;
         this.entityRoute = "/cartLines"
     }
 }
+
+const cartLineService = new CartLineService();
+export default cartLineService;

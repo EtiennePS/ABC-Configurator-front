@@ -1,10 +1,13 @@
 import AbstractAbcService from "@/services/AbstractAbcService";
-import Item from "@/models/Item";
+import Option from "@/models/Option";
 
-export default class ItemService extends AbstractAbcService {
+class OptionService extends AbstractAbcService {
     constructor() {
         super();
-        this.model = Item;
+        this.model = Option;
         this.entityRoute = "/options"
     }
 }
+
+const optionService = new OptionService();
+export default optionService;

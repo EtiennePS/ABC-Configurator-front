@@ -1,10 +1,10 @@
 import AbstractAbcService from "@/services/AbstractAbcService";
-import Item from "@/models/Item";
+import User from "@/models/user";
 
-export default class ItemService extends AbstractAbcService {
+class UserService extends AbstractAbcService {
     constructor() {
         super();
-        this.model = Item;
+        this.model = User;
         this.entityRoute = "/users"
     }
 
@@ -24,3 +24,6 @@ export default class ItemService extends AbstractAbcService {
         this.doGet(this.entityRoute + "/name/" + name, onSuccess, onFail, onDone, options);
     }
 }
+
+const userService = new UserService();
+export default userService;
