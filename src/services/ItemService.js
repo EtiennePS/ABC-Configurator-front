@@ -7,6 +7,10 @@ class ItemService extends AbstractAbcService {
         this.model = Item;
         this.entityRoute = "/items"
     }
+
+    getById(id, onSuccess, onFail, onDone, options) {
+        this.doGet(this.entityRoute + "/id/" + id, onSuccess, onFail, onDone, options);
+    }
 }
 
 const itemService = new ItemService();
